@@ -1,8 +1,12 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React, { Component } from 'react'
+import Login from './components/login'
 
-const App = () => {
-	return <div className="App">App component</div>;
-};
-
-export default App;
+export default class App extends Component {
+    render() {
+        return (
+            <div>
+                <Login/>
+            </div>
+        )
+    }
+}
