@@ -7,7 +7,7 @@ const { user } = require("../db");
 
 
 userRouter.get('/',getAllUser);
-userRouter.get('/',getUser);
+userRouter.post('/',getUser);
 userRouter.post('/user',addNewUser);
 userRouter.put('/user',updateUser);
 

@@ -31,9 +31,11 @@ export default function Login() {
   //     console.log("error");
   //   });
   axios
-  .get('user/',
-  email,
-  password
+  .post('user/',
+ {
+   email: email,
+   password: password
+ }
   )
   .then(response => {
     console.log(response);

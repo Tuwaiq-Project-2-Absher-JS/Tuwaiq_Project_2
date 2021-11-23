@@ -11,7 +11,11 @@ const getAllUser = (req,res)=>{
 const getUser = (req, res) => {
     // console.log(req.body)
     // console.log(user);
-    const foundUser = user.find( ({ email, password }) => email === req.body.email && password === req.body.password );
+    const {email, password} = req.body;
+    // console.log("email sent:",email)
+    const foundUser = user.find( (elem) => {
+        // console.log("email in database:", elem.email)
+        return (elem.email == email && elem.password == password)} );
       console.log(foundUser);
     if(foundUser)
       res.send(foundUser);
