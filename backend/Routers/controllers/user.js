@@ -22,8 +22,17 @@ const getUser = (req, res) => {
 const addNewUser = (req,res)=>{
     const addedUser = {
         name: req.body.name,
+        id: req.body.id,
         job: req.body.job,
-        hobby: req.body.hobby,
+        Tell: req.body.Tell,
+        email: req.body.email,
+        password: req.body.password,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        birthCity: req.body.birthCity,
+        birthCountry: req.body.birthCountry,
+        maritalStatus: req.body.maritalStatus,
+        dateBrith: req.body.dateBrith,
+        role: req.body.role
+
     }
 
     user.push(addedUser)
@@ -40,7 +49,7 @@ const updateUser = (req,res)=>{
             elem.Tell=req.body.Tell;
             elem.birthCity=req.body.birthCity;
             elem.birthCountry=req.body.birthCountry;
-           
+        
         }
     })
 }

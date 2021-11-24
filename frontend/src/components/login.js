@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 // import { useNavigate } from "react-router-dom";
-import axios from 'axios'
-
+import axios from "axios";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -14,33 +13,28 @@ export default function Login() {
     return email.length > 0 && password.length > 0;
   }
 
-
-
-
   function handleSubmit(event) {
     event.preventDefault();
-  //   axios.get('http://localhost:5000/user',data {
-  //     email,
-  //     password
-  //   })
-  //   .then( (response)=> {
-  //     console.log(response);
-  //     // navigation('/gggg')
-  //   })
-  //   .catch( (error)=> {
-  //     console.log("error");
-  //   });
-  axios
-  .get('user/',
-  email,
-  password
-  )
-  .then(response => {
-    console.log(response);
-  })
-  .catch(err => {
-console.log(err);  });
-   }
+    //   axios.get('http://localhost:5000/user',data {
+    //     email,
+    //     password
+    //   })
+    //   .then( (response)=> {
+    //     console.log(response);
+    //     // navigation('/gggg')
+    //   })
+    //   .catch( (error)=> {
+    //     console.log("error");
+    //   });
+    axios
+      .get("user/", email, password)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   return (
     <div className="Login">
