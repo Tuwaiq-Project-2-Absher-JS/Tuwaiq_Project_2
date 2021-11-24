@@ -15,26 +15,32 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    //   axios.get('http://localhost:5000/user',data {
-    //     email,
-    //     password
-    //   })
-    //   .then( (response)=> {
-    //     console.log(response);
-    //     // navigation('/gggg')
-    //   })
-    //   .catch( (error)=> {
-    //     console.log("error");
-    //   });
-    axios
-      .get("user/", email, password)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+
+  
+  //   axios.get('http://localhost:5000/user',data {
+  //     email,
+  //     password
+  //   })
+  //   .then( (response)=> {
+  //     console.log(response);
+  //     // navigation('/gggg')
+  //   })
+  //   .catch( (error)=> {
+  //     console.log("error");
+  //   });
+  axios
+  .post('user/',
+ {
+   email: email,
+   password: password
+ }
+  )
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err => {
+console.log(err);  });
+   }
 
   return (
     <div className="Login">
