@@ -1,4 +1,5 @@
 
+
 import Dashbord from './components/Dashbord'
 import React, { Component } from 'react';
 import Header from './components/Header';
@@ -11,8 +12,6 @@ import Login from './components/login'
 export default class App extends Component {
     render() {
         return (
-
-                
             <div className="App">
           <Dashbord/>
                 <Rigester/>

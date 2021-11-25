@@ -1,17 +1,19 @@
+
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 // import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  // const navigation = useNavigate();
+// export default function Login() {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   // const navigation = useNavigate();
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
+//   function validateForm() {
+//     return email.length > 0 && password.length > 0;
+//   }
+
 
   function handleSubmit(event) {
     event.preventDefault();
