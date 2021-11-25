@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container ,Row,Col} from "react-bootstrap";
 import logo from "../img/abshir.jpg";
 import logo2 from "../img/2030.jpg";
 import logo3 from "../img/saudi.jpg";
-import './stayle.css';
+import "./stayle.css";
 
 export default class Header extends Component {
   render() {
@@ -28,6 +28,7 @@ export default class Header extends Component {
             </Nav>
           </Container>
         </Navbar>
+
       </div>
     );
   }
