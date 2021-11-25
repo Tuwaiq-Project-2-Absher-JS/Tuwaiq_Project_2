@@ -82,15 +82,6 @@ const registrUser = (req,res)=>{
      console.log('Inside Person Info')
     //const id = req.params.id; // '1'
     const result = users.find( ({ id }) => id === parseInt(req.params.id));
-
-    // if(result)
-    //   res.send(result);
-    // else
-    //   res.send("User is not found")
-
-    //   const result = users.find( ({ id }) => {
-    //     // console.log("email in database:", elem.email)
-    //     return (id === id)} );
       console.log(result);
     if(result)
       res.send(result);
