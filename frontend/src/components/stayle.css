@@ -8,11 +8,13 @@
     background-color:#239B56;
     color: white;
     margin-left: 45px;
-    width: 60%;
+    width: 40%;
 }
 
 #ddd{   
 width: 50px;
 }
 
-
+#foot {
+    background-color:white;
+}

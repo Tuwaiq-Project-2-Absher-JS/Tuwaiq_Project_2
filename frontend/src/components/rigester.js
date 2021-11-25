@@ -14,26 +14,33 @@ import logo2 from "../img/2030.jpg";
 import logo3 from "../img/saudi.jpg";
 import "./stayle.css";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom'
 
-export default function rigester() {
+export default function Rigester() {
   const [userName, setUserName] = useState("");
   const [userId, setUserID] = useState("");
   const [userTell, setUserTell] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [userEmile, setUserEmile] = useState("");
+  const navigation = useNavigate()
 
   function handleSubmit(event) {
     event.preventDefault();
     axios
-      .post("", {
+      .post("/user/rigester", {
         name: userName,
         id: userId,
         tell: userTell,
         password: userPassword,
         emile: userEmile,
       })
-      .then()
-      .catch();
+      .then(response=>{
+        console.log(response);
+        navigation('/rigester')
+      })
+      .catch(err =>{
+        console.log(err.response.data)
+      });
   }
   return (
     <div>
@@ -132,11 +139,12 @@ export default function rigester() {
                   }}
                 />
               </Form.Group>
-            </Form>
-
-            <Button id="btn" variant="" type="submit">
+              <Button id="btn" variant="" type="submit">
               Register
             </Button>
+            </Form>
+
+            
 
           </Col>
           <Col>
