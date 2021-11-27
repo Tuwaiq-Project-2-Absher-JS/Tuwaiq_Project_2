@@ -1,18 +1,23 @@
-const e = require('express')
-const {user} = require('../db')
+const express = require('express')
+const {users} = require('../db')
 
 // _________________________________________________________________________
                 //  getUser
 // _________________________________________________________________________
 const getAllUser = (req,res)=>{
-    res.send(user)
+    res.send(users)
 }
 
 const getUser = (req, res) => {
     // console.log(req.body)
     // console.log(user);
-    const foundUser = user.find( ({ email, password }) => email === req.body.email && password === req.body.password );
-        console.log(foundUser);
+
+    const {email, password} = req.body;
+    // console.log("email sent:",email)
+    const foundUser = users.find( (elem) => {
+        // console.log("email in database:", elem.email)
+        return (elem.email == email && elem.password == password)} );
+      console.log(foundUser);
     if(foundUser)
         res.send(foundUser);
     else
@@ -32,17 +37,16 @@ const addNewUser = (req,res)=>{
         maritalStatus: req.body.maritalStatus,
         dateBrith: req.body.dateBrith,
         role: req.body.role
-
     }
 
-    user.push(addedUser)
+    users.push(addedUser)
 
     res.status(201).send(addedUser);
 }
 
 const updateUser = (req,res)=>{
     const userId = req.query.id
-    user.forEach((elem,i)=>{
+    users.forEach((elem,i)=>{
         if(i == userId){
             elem.name = req.body.name;
             elem.job = req.body.job;
@@ -69,7 +73,7 @@ const updateUser = (req,res)=>{
 
 const registrUser = (req,res)=>{
     const userId = req.query.id
-    user.forEach((elem,i)=>{
+    users.forEach((elem,i)=>{
         if(i == userId){
             elem.name = req.body.name;
             elem.job = req.body.job;
@@ -80,4 +84,16 @@ const registrUser = (req,res)=>{
         }
     })
 }
-module.exports = {getAllUser,getUser,updateUser,addNewUser,registrUser}
+
+ function getPersonInfo(req, res) {
+     console.log('Inside Person Info')
+    //const id = req.params.id; // '1'
+    const result = users.find( ({ id }) => id === parseInt(req.params.id));
+      console.log(result);
+    if(result)
+      res.send(result);
+    else
+      res.status(404).send("We couldn’t find an account matching the email and password you entered. Please check and try again.");
+  };
+
+module.exports = {getAllUser,getUser,updateUser,addNewUser,registrUser, getPersonInfo}

@@ -28,7 +28,6 @@ export default class Header extends Component {
             </Nav>
           </Container>
         </Navbar>
-
       </div>
     );
   }
