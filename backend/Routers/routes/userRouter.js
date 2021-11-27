@@ -7,9 +7,9 @@ const { users } = require("../db");
 
 
 userRouter.get('/',getAllUser);
+userRouter.post('/rigester/',addNewUser);
 userRouter.post('/:id',getPersonInfo);
 userRouter.post('/',getUser);
-userRouter.post('/user',addNewUser);
 userRouter.put('/user',updateUser);
 
 module.exports={userRouter};

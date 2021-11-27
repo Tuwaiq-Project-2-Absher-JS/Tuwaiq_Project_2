@@ -86,7 +86,7 @@ export default function Home()   {
     
 =======
 import React, { Component } from "react";
-import { Container, Col, Row, Form, Button } from "react-bootstrap";
+import { Container, Col, Row, Form, Button,Breadcrumb } from "react-bootstrap";
 import logo4 from "../img/abshir2.jpg";
 import "./stayle.css";
 
@@ -110,6 +110,9 @@ export default class Home extends Component {
                 <Button id="btn" variant="" type="submit">
                   Login
                 </Button>
+                <Breadcrumb>
+                  <Breadcrumb.Item href="rigester">Sigun Up ?</Breadcrumb.Item>
+                </Breadcrumb>
               </Form>
             </Col>
             <Col id="ddd">

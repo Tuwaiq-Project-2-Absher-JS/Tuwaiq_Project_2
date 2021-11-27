@@ -5,12 +5,12 @@ import logo5 from "./abshir33.jpg";
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="white" className="font-small pt-4 mt-4">
-      <MDBContainer fluid className="text-center text-md-left">
+    <MDBFooter id="foot" color="white" className="font-small pt-4 mt-4">
+      {/* <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
             <b className="title">Powered by National Information Center </b>
-            <img src={logo4} alt="Abshirs " height="20px"></img>
+              <img src={logo4} alt="Abshirs " height="20px"></img>
             <p>Absher is the leading platform in electronic services</p>
           </MDBCol>
           <MDBCol md="6"style={{paddingleft: "200px"}}>
@@ -31,7 +31,7 @@ const FooterPage = () => {
             </ul>
           </MDBCol>
         </MDBRow>
-      </MDBContainer>
+      </MDBContainer> */}
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com">  Absher, Kingdom of Saudi Arabia. </a>

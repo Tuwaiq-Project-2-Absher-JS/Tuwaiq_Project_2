@@ -7,7 +7,8 @@ import Home from './components/Home';
 import './App.css';
 import Rigester from'./components/rigester';
 import Footer from './components/footer/Footer';
-import Login from './components/login'
+
+import Login from './components/login' 
 
 export default class App extends Component {
     render() {
@@ -15,11 +16,12 @@ export default class App extends Component {
             <div className="App">
           <Dashbord/>
                 <Rigester/>
-                <Footer/>
+
                 <Header/>
                 <Home/>
+                <Footer/>
+                {/* <Rigester/> */}
                 
-               <Login/>
 
             </div>
         )

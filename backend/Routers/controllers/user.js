@@ -11,6 +11,7 @@ const getAllUser = (req,res)=>{
 const getUser = (req, res) => {
     // console.log(req.body)
     // console.log(user);
+
     const {email, password} = req.body;
     // console.log("email sent:",email)
     const foundUser = users.find( (elem) => {
@@ -18,10 +19,10 @@ const getUser = (req, res) => {
         return (elem.email == email && elem.password == password)} );
       console.log(foundUser);
     if(foundUser)
-      res.send(foundUser);
+        res.send(foundUser);
     else
-      res.status(404).send("We couldn’t find an account matching the email and password you entered. Please check and try again.");
-  };
+        res.status(404).send("We couldn’t find an account matching the email and password you entered. Please check and try again.");
+    };
 
 const addNewUser = (req,res)=>{
     const addedUser = {
