@@ -1,0 +1,30 @@
+.text > h4,
+p {
+  text-align: justify;
+  font-size: 12px;
+}
+
+p {
+  color: rgb(12, 112, 17);
+}
+h6{
+    text-align: left;
+}
+
+
+#text{
+    text-align: justify;
+    font-size: 12px;  
+}
+#btn2{
+ margin-top: 29px;
+ color: white;
+ background-color:#0e9346;
+ width: 200px;
+ margin-left: 20px;
+}
+ 
+
+.titel-icon>img{
+    float: left;
+}
